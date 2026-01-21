@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wilber Maeri — Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
@@ -11,70 +11,61 @@
 <body>
   <main class="container">
     <header class="header">
-      <img class="avatar" src="https://avatars.githubusercontent.com/Wilber-rgb-png" alt="Wilber avatar" />
-      <div class="container">
-    <h1>Wilber Maeri</h1>
-    <p>IT professional |software developer| UX/UI Designer | Full stack dev</p>
-    
-    <div class="button-group">
-        <a href="https://github.com/YOUR_USERNAME" class="btn btn-github">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-        
-        <a href="https://linkedin.com/in/YOUR_PROFILE" class="btn btn-linkedin">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        
-        <a href="mailto:your-email@example.com" class="btn btn-email">
-            <i class="fas fa-envelope"></i> Email
-        </a>
-        
-        <a href="wilber-cv.pdf" class="btn btn-cv" download>
-            <i class="fas fa-file-pdf"></i> Download CV
-        </a>
-    </div>
-</div>
+      <img class="avatar" src="https://github.com/wilber-rgb-png.png" alt="Wilber avatar" />
+      
+      <h1>Wilber Maeri</h1>
+      <p>IT Professional | Software Developer | UI/UX Designer | Full Stack Dev</p>
+      
+      <div class="button-group">
+          <a href="https://github.com/wilber-rgb-png" class="btn btn-github">
+              <i class="fab fa-github"></i> GitHub
+          </a>
+          
+          <a href="https://www.linkedin.com/in/wilber-maeri-ab200466cd" class="btn btn-linkedin">
+              <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          
+          <a href="mailto:youractualemail@gmail.com" class="btn btn-email">
+              <i class="fas fa-envelope"></i> Email
+          </a>
+          
+          <a href="wilber-cv.pdf" class="btn btn-cv" download>
+              <i class="fas fa-file-pdf"></i> Download CV
+          </a>
+      </div>
     </header>
 
     <section>
-  <h2>Technical Skills</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Development & Design</h3>
-      <p class="desc">HTML, CSS, JavaScript, UI/UX (Figma),SCRATCH and Mobile App Development.</p>
-    </div>
-    <div class="card">
-      <h3>Systems & Data</h3>
-      <p class="desc">SQL (MySQL/PostgreSQL), Python, Network Troubleshooting, and System Admin.</p>
-    </div>
-  </div>
-</section>
+      <h2>Technical Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Development & Design</h3>
+          <p class="desc">HTML, CSS, JavaScript, UI/UX (Figma), SCRATCH and Mobile App Development.</p>
+        </div>
+        <div class="card">
+          <h3>Systems & Data</h3>
+          <p class="desc">SQL (MySQL/PostgreSQL), Python, Network Troubleshooting, and System Admin.</p>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <p>© 2026 Wilber Maeri · <a href="https://www.linkedin.com/in/wilber-maeri-ab200466cd" target="_blank" class="link-secondary">Connect on LinkedIn</a></p>
     </footer>
   </main>
-
-  <script>
-    async function loadProjects() {
-      try {
-        const res = await fetch('projects.json');
-        const projects = await res.json();
-        const container = document.getElementById('projects');
-        container.innerHTML = projects.map(p => `
-          <article class="card">
-            <div class="card-body">
-              <h3>${p.title}</h3>
-              <p class="desc">${p.description}</p>
-              <p class="meta">${p.tech ? p.tech.join(' · ') : ''}</p>
-              <p class="links">
-                <a href="${p.repo}" target="_blank">View Code</a>
-              </p>
-            </div>
-          </article>
-        `).join('');
-      } catch (err) { console.error("Error loading projects:", err); }
-    }
-    loadProjects();
-  </script>
 </body>
-</html> 
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
