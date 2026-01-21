@@ -7,63 +7,57 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    /* This fades in the whole page */
     animation: fadeIn 1s ease-out;
 }
 
-/* 2. Style for the container holding the text */
-/* (Assuming your content is in a main tag or body) */
-main, .content, body {
-    text-align: center;
+/* 2. Container for the buttons */
+/* This targets the area where your links are located */
+.links, .content, main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows buttons to wrap on mobile */
+    gap: 20px;       /* THIS ADDS THE SPACE BETWEEN BUTTONS */
+    margin-top: 20px;
 }
 
-/* 3. Turn the links into buttons */
+/* 3. Base Button Styling */
 a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 8px;
+    padding: 12px 24px; /* More padding makes them look like real buttons */
+    border-radius: 12px;
     font-weight: 600;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     color: white !important;
+    border: none;
 }
 
-/* 4. Hide the "·" dots between links */
-/* This trick hides text that isn't inside an <a> tag in that area */
-body {
-    color: transparent; /* Hides the dots */
-}
-h1, p {
-    color: #333; /* Brings your text back to visible */
-}
+/* 4. Individual Button Colors based on URL */
+a[href*="github"] { background-color: #24292e; }
+a[href*="linkedin"] { background-color: #0077b5; }
+a[href*="mailto"] { background-color: #ea4335; }
+a[href*=".pdf"] { background-color: #34a853; }
 
-/* 5. Color the buttons based on the URL */
-a[href*="github"] {
-    background-color: #24292e;
-}
-
-a[href*="linkedin"] {
-    background-color: #0077b5;
-}
-
-a[href*="mailto"] {
-    background-color: #ea4335;
-}
-
-a[href*=".pdf"] {
-    background-color: #34a853;
-}
-
-/* 6. Hover Effects */
+/* 5. Hover Effects */
 a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    filter: brightness(1.2);
+    transform: translateY(-4px); /* Slightly higher lift */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    filter: brightness(1.1);
 }
 
-/* 7. Fade In Animation */
+/* 6. Hiding those dots (·) from the original template */
+body {
+    color: transparent; 
+}
+h1, h2, p, span {
+    color: #333; /* Keeps your text visible while hiding dots */
+}
+
+/* 7. Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
