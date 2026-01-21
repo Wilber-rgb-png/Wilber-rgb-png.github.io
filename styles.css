@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allows buttons to wrap on mobile */
-    gap: 20px;       /* THIS ADDS THE SPACE BETWEEN BUTTONS */
+    gap: 30px;       /* THIS ADDS THE SPACE BETWEEN BUTTONS */
     margin-top: 20px;
 }
 
