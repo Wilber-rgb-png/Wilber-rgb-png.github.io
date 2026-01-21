@@ -1,4 +1,4 @@
-/* 1. Viewport & Global Styles (Updated for Gold/Black) */
+/* 1. Global Styles & Variables */
 :root {
     --bg-deep: #050505;
     --gold-primary: #D4AF37; 
@@ -22,7 +22,7 @@ body {
     min-height: 100vh;
 }
 
-/* Matrix Background Canvas logic */
+/* Matrix Background Layer */
 #matrix {
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ body {
     opacity: 0.15;
 }
 
-/* 2. Responsive Container (Upgraded to Glassmorphism) */
+/* 2. Main Container */
 .container {
     max-width: 900px;
     margin: 40px auto;
@@ -44,7 +44,7 @@ body {
     animation: fadeIn 1s ease-out;
 }
 
-/* 3. Shimmer Effect for H1 */
+/* 3. The Gold Shimmer Title */
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
@@ -58,22 +58,20 @@ h1 {
     font-weight: 700;
 }
 
-/* 4. Button Layout (Keeping your original Flex logic) */
-.button-group, .links {
+/* 4. Buttons */
+.button-group {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 15px;
     margin: 35px 0;
 }
 
-.btn, a.btn {
+.btn {
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 12px;
     font-weight: 600;
-    white-space: nowrap;
     transition: 0.3s;
     border: 1px solid rgba(212, 175, 55, 0.4);
     color: var(--gold-primary);
@@ -87,31 +85,42 @@ h1 {
     box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
 }
 
-/* Highlighted CV Button */
 .btn-cv {
     background: var(--gold-primary) !important;
     color: #000 !important;
 }
 
-/* 5. Technical Skills Cards (Keeping your Flex logic) */
-.skills-grid, .grid {
+/* 5. Skill Cards & New Icons */
+.grid {
     display: flex;
     gap: 20px;
     margin-top: 30px;
 }
 
-.skill-card, .card {
+.card {
     flex: 1;
     background: rgba(255, 255, 255, 0.03);
     padding: 25px;
     border-radius: 20px;
     border: 1px solid rgba(212, 175, 55, 0.1);
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.skill-card:hover, .card:hover {
+.card:hover {
     border-color: var(--gold-primary);
     background: rgba(212, 175, 55, 0.08);
+}
+
+/* THE NEW ICON STYLES GO HERE */
+.skill-icon {
+    font-size: 2rem;
+    color: var(--gold-primary);
+    margin-bottom: 15px;
+    display: block;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 .card h3 {
@@ -119,33 +128,16 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* 6. MOBILE FIXES (Maintained from your original) */
+/* 6. Mobile Responsiveness */
 @media (max-width: 768px) {
-    .container {
-        padding: 20px;
-        margin: 10px;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .skills-grid, .grid {
-        flex-direction: column;
-    }
-
-    .button-group, .links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn, a.btn {
-        width: 100%;
-        text-align: center;
-    }
+    .container { padding: 20px; margin: 10px; }
+    h1 { font-size: 2.2rem; }
+    .grid { flex-direction: column; }
+    .button-group { flex-direction: column; width: 100%; }
+    .btn { width: 100%; text-align: center; }
 }
 
-/* Animations */
+/* Keyframes */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
