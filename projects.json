@@ -1,20 +1,20 @@
 [
   {
-    "title": "E-Learning Platform",
-    "repo": "https://github.com/Wilber-rgb-png",
-    "description": "A digital classroom solution featuring course management and interactive learning modules.",
-    "tech": ["Web Development", "UI/UX Design"]
+    "title": "[name of your project]",
+    "repo": "[link of your project repo]",
+    "description": "[A short description about your project] ",
+    "tech": ["#"]
   },
   {
-    "title": "Movers Management System",
-    "repo": "https://github.com/Wilber-rgb-png",
-    "description": "Logistics platform designed to streamline booking, inventory tracking, and transport scheduling.",
-    "tech": ["System Analysis", "Frontend Dev"]
+    "title": "[second project title]",
+    "repo": "[l of your inkproject repo]",
+    "description": "[A short description about your project]",
+    "tech": ["#"]
   },
   {
-    "title": "Agrimatch (Mobile App)",
-    "repo": "https://github.com/Wilber-rgb-png",
-    "description": "A mobile solution providing farmers with data-driven insights on climate and soil suitability.",
-    "tech": ["Mobile Development", "Data Analysis"]
+    "title": "(third project title)",
+    "repo": "[l of your inkproject repo]",
+    "description": "[A short description about your project]",
+    "tech": ["#"]
   }
 ]
